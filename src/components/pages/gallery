@@ -1,0 +1,12 @@
+async function fetchHomepage() {
+  try {
+    const response = await client.getEntries({
+      content_type: 'Homepage', // Replace with your content type ID
+    });
+
+    const Homepage = response.items;
+    return Homepage;
+  } catch (error) {
+    console.error('Error fetching data from Contentful', error);
+  }
+}
