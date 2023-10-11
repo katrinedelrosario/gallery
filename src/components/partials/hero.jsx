@@ -13,7 +13,7 @@ const Hero = () => {
     client.getEntries({ content_type: 'homepage' })
       .then((response) => {
         if (response.items.length > 0) {
-          const image = response.items[0].fields.heroImage.file.url
+          const image = response.items[0].fields.heroImage.fields.file.url
           const title = response.items[0].fields.heroTitle
           const description = response.items[0].fields.heroDescription
 
