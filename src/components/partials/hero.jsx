@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {client}  from '../../client.js'
 import { Description, HeroContainer, HeroImage } from './hero.styled.js'
 import CustomHeroTitle from './customHeroTitle.jsx'
+import {doctumentToReactComponents} from '@contentful/rich-text-react-renderer'
 
 const Hero = () => {
 

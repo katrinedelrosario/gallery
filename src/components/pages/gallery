@@ -1,12 +1,17 @@
-async function fetchHomepage() {
+import React from 'react'
+import { client } from '../../client'
+
+async function fetchGallery() {
   try {
     const response = await client.getEntries({
-      content_type: 'Homepage', // Replace with your content type ID
-    });
+      content_type: 'gallery',
+    })
 
-    const Homepage = response.items;
-    return Homepage;
+    const Gallery = response.items;
+    return Homepage
   } catch (error) {
-    console.error('Error fetching data from Contentful', error);
+    console.error('Error fetching data from Contentful', error)
   }
 }
+
+export default Gallery
